@@ -1,0 +1,43 @@
+<config>
+    {{@if (config_tab_type != 'system') }}
+    <tabs>
+        <{{Config_Tab_Name}} translate="label" module="{{Config_Node_Code}}">
+            <label>{{Config_Tab_Label}}</label>
+            <sort_order>{{Config_Tab_Position}}</sort_order>
+        </{{Config_Tab_Name}}>
+    </tabs>
+    {{@endif}}
+    <sections>
+        <{{Config_Section_Name}} translate="label" module="{{Config_Node_Code}}">
+            <label>{{Config_Section_Label}}</label>
+            <tab>{{Config_Tab_Name}}</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="{{Config_Node_Code}}">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label,comment" module="{{Config_Node_Code}}">
+                            <label>Enable</label>
+                            <comment><![CDATA[Enable/Disable the extension.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                    </fields>
+                </general>
+            </groups>
+        </{{Config_Section_Name}}>
+    </sections>
+</config>

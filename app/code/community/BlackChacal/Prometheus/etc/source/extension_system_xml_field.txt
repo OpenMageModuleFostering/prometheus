@@ -1,0 +1,13 @@
+<{{Field Name}} translate="label,comment" module="{{Config Node Code}}">
+    <label>{{Field Label}}</label>
+    <comment><![CDATA[{{Field Comment}}]]></comment>
+    <frontend_type>{{Field Frontend Type}}</frontend_type>
+    <source_model>{{Field Source Model}}</source_model>
+    <backend_model>{{Field Source Model}}</backend_model>
+    <upload_dir>{{Field Upload Dir}}</upload_dir>
+    <sort_order>1</sort_order>
+    <show_in_default>1</show_in_default>
+    <show_in_website>1</show_in_website>
+    <show_in_store>1</show_in_store>
+    <depends>{{Field Dependency}}</depends>
+</{{Field Name}}>
