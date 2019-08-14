@@ -21,28 +21,25 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
-class BlackChacal_Prometheus_Model_System_Config_Source_Systemtabs
+class BlackChacal_Prometheus_Model_System_Config_Source_Systemmenu
 {
     /**
-     * Returns the configuration options for the
-     * "prometheus/default_extension/config_tab_system"
-     * - "Configuration Tab Name - System Name" select input.
+     * Returns the top admin menu items.
      *
      * @access public
-     * @return array Configuration Options
+     * @return array Admin Menu Items
      */
     public function toOptionArray()
     {
         $helper = Mage::helper('blackchacal_prometheus');
-        $tabs = Mage::getSingleton('adminhtml/config')->getTabs();
+        $adminMenu = Mage::getSingleton('admin/config')->getAdminhtmlConfig()->getNode('menu');
         $options = array();
 
-        foreach($tabs as $tabData) {
-
-            foreach($tabData as $tabCode => $tabInfo) {
+        foreach($adminMenu as $adminMenuData) {
+            foreach($adminMenuData as $menuItemCode => $menuItemInfo) {
                 $options[] = array(
-                    'value' => $tabCode,
-                    'label' => $helper->__((string)$tabInfo->label)
+                    'value' => $menuItemCode,
+                    'label' => $helper->__((string)$menuItemInfo->title)
                 );
             }
         }
