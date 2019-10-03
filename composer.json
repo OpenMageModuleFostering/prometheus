@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Prometheus",
+    "name": "OpenMageModuleFostering\/Prometheus",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "Prometheus allows the creation of Magento 1.7+ extensions.",
     "authors": [
-    {
-        "name": "Ricardo Tonet",
-        "email": "ribeiro.tonet@gmail.com"
-    }
-],
+        {
+            "name": "Ricardo Tonet",
+            "email": "ribeiro.tonet@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
